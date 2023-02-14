@@ -21,15 +21,15 @@ class App extends React.Component{
     return (
       <div className="App">
         <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <h1>TODO</h1>
           <ul>
             {this.state.todos.map((todo) => {
               return (
-                <TodoItem key={todo.id} text={todo.text}/>
+                <TodoItem key={todo.id} name={todo.id} text={todo.text}/>
               )
             })}
           </ul>
-          <img src={logo} className="App-logo" alt="logo" />
           <form onSubmit={this.handleSubmit}>
             <input 
               type="text"
